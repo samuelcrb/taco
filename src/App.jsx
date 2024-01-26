@@ -1,21 +1,20 @@
 import './App.css'
 
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import XrCube from './Components/XrCube'
+import { ARButton, XR } from '@react-three/xr'
 
 function App() {
 
 
   return (
-    <>
+
+    <> 
+      <ARButton/>
       <Canvas>
-        
-        <OrbitControls/>
-        <ambientLight/>
-        <mesh>
-          <boxGeometry/>
-          <meshStandardMaterial color={"mediumpurple"}></meshStandardMaterial>
-        </mesh>
+        <XR>
+          <XrCube/> 
+        </XR>
       </Canvas>
     </>
   )
